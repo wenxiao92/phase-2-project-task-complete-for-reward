@@ -12,6 +12,7 @@ const CreateTask = () => {
       />
       <input
         type="text"
+        placeholder="points"
       />
     </form>
     </div>
