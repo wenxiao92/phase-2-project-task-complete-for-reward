@@ -1,13 +1,10 @@
 import React from 'react'
-import Home from './Components/Home';
-import CreateTask from './Components/CreateTask.js';
+import NavBar from './Components/NavBar'
 
 function App() {
   return (
     <div className="App">
-      <Home />
-      <CreateTask />
-
+      <NavBar />
     </div>
   );
 }
