@@ -1,17 +1,18 @@
 import React from 'react'
-import {Route, useRouteMatch} from "react-router-dom";
-import Home from './Home';
-import TaskPage from './TaskPage.js';
-import RewardRedemption from './RewardRedemption.js';
+import {Link } from "react-router-dom"
+
 
 function NavBar(){
-    return (
-        <div className="App">
-          <Route exact path="/"> <Home /> </Route>
-          <Route exact path="/tasks"> <TaskPage /> </Route>
-          <Route exact path="/rewards"> <RewardRedemption/> </Route>
-        </div>
-      );
+        return (
+            <nav>
+                 <ul>
+                <li><Link to="/"> Home </Link></li>
+                <li><Link to="/tasks"> Tasks </Link></li>
+                <li><Link to="/rewards"> Rewards </Link></li>
+                </ul>
+            </nav>
+        );
+      
 }
 
 export default NavBar
