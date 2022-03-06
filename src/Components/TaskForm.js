@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CreateTask = () => {
+const TaskForm = () => {
   return (
     <div>
       <h3>Add a Task!</h3>
@@ -19,4 +19,4 @@ const CreateTask = () => {
   )
 }
 
-export default CreateTask
+export default TaskForm
