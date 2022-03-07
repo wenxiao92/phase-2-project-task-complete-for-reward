@@ -5,6 +5,7 @@
             "taskName": "Clean room",
             "tickets": 600,
             "status": false,
+            "frequency": "weekly",
             "date": "1/1/2022"
         },
         {
@@ -12,6 +13,7 @@
             "taskName": "Exercise",
             "tickets": 250,
             "status": false,
+            "frequency": "Ideally everyday",
             "date": "1/1/2022"
         },
         {
@@ -19,6 +21,7 @@
             "taskName": "Eat Breakfast",
             "tickets": 100,
             "status": false,
+            "frequency": "daily",
             "date": "1/1/2022"
         },
         {
@@ -26,6 +29,7 @@
             "taskName": "Meal Prep",
             "tickets": 200,
             "status": false,
+            "frequency": "Ideally often",
             "date": "1/1/2022"
         },
         {
@@ -33,6 +37,7 @@
             "taskName": "Flatiron school assignments",
             "tickets": 100,
             "status": false,
+            "frequency": "daily",
             "date": "1/1/2022"
         },
         {
@@ -40,6 +45,7 @@
             "taskName": "Laundry",
             "tickets": 600,
             "status": false,
+            "frequency": "weekly",
             "date": "1/1/2022"
         },
         {
@@ -47,6 +53,7 @@
             "taskName": "Take daily vitamins",
             "tickets": 100,
             "status": false,
+            "frequency": "daily",
             "date": "1/1/2022"
         }
     ]
