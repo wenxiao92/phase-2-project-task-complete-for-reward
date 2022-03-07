@@ -1,6 +1,7 @@
 import React from 'react'
 
-const TaskList = () => {
+const TaskList = ({tasks}) => {
+    console.log(tasks)
   return (
     <div>
       <h3>Display Tasks!</h3>

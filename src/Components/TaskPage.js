@@ -2,11 +2,19 @@ import React from 'react'
 import TaskForm from './TaskForm.js';
 import TaskList from './TaskList.js';
 
-const TaskPage = () => {
+function TaskPage({allTasks}) {
+  const displayTasks = allTasks.map((task) => (
+    <TaskList 
+    key = {task.id}
+    tasks = {task}
+    />
+  ))
+  
+
   return (
     <div>
     <TaskForm />
-    <TaskList />
+    {displayTasks}
     </div>
   )
 }
