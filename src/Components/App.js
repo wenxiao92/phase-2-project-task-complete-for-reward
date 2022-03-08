@@ -9,6 +9,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 function App() {
   const [tasks, setTasks] = useState([])
   const [currency, setCurrency] = useState(0)
+  const [displayState, setDisplayState] = useState(false)
 
   useEffect(() => {
     fetch("http://localhost:3001/task")
@@ -28,15 +29,24 @@ function App() {
       }
     });
     setTasks(updateTaskArray);
+    setCurrency((money) => money+updatedTask.tickets)
   }
 
+  console.log(displayState)
+  function handleTaskDisplay(){
+    setDisplayState((toggle) => !toggle)
+  }
+
+  let filterActiveTask = tasks
+  if(displayState === true) {
+  filterActiveTask = tasks.filter((task) => task.status === false)}
 
   return (
       <BrowserRouter>
       <NavBar />
       <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/tasks" element={<TaskPage allTasks={tasks} onUpdateTask={handleUpdate}/>} />
+          <Route path="/tasks" element={<TaskPage allTasks={filterActiveTask} onUpdateTask={handleUpdate} onHandleDisplay={handleTaskDisplay} switchStatus={displayState}/>} />
           <Route path="/rewards" element={<RewardRedemption />} />
         </Routes>
         </BrowserRouter>

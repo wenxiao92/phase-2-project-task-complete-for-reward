@@ -8,8 +8,9 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 import TableCell from '@material-ui/core/TableCell';
+import Switch from '@material-ui/core/Switch';
 
-function TaskPage({allTasks, onUpdateTask}) {
+function TaskPage({allTasks, onUpdateTask, onHandleDisplay, switchStatus}) {
   const displayTasks = allTasks.map((task) => (
     <TaskList 
     key = {task.id}
@@ -33,6 +34,14 @@ function TaskPage({allTasks, onUpdateTask}) {
     <div>
     <TaskForm />
     <h1 align="center">Display Tasks!</h1>
+    <div align="center">Show All Tasks
+      <Switch 
+        checked={switchStatus}
+        onClick={onHandleDisplay}
+        color="primary"
+        name="checkedB"
+        inputProps={{ 'aria-label': 'primary checkbox' }}
+      /> Show Outstanding Tasks</div>
     <TableContainer component={Paper}>
     <Table className={classes.table} aria-label="simple table">
     <TableHead>
