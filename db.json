@@ -4,8 +4,8 @@
       "id": 1,
       "taskName": "Clean room",
       "currency": 600,
-      "status": false,
-      "frequency": "weekly",
+      "status": true,
+      "frequency": "Weekly",
       "date": "1/1/2022"
     },
     {
@@ -21,7 +21,7 @@
       "taskName": "Eat Breakfast",
       "currency": 100,
       "status": false,
-      "frequency": "daily",
+      "frequency": "Daily",
       "date": "1/1/2022"
     },
     {
@@ -37,7 +37,7 @@
       "taskName": "Flatiron school assignments",
       "currency": 100,
       "status": false,
-      "frequency": "daily",
+      "frequency": "Daily",
       "date": "1/1/2022"
     },
     {
@@ -45,7 +45,7 @@
       "taskName": "Laundry",
       "currency": 600,
       "status": false,
-      "frequency": "weekly",
+      "frequency": "Weekly",
       "date": "1/1/2022"
     },
     {
@@ -53,8 +53,16 @@
       "taskName": "Take daily vitamins",
       "currency": 100,
       "status": false,
-      "frequency": "daily",
+      "frequency": "Daily",
       "date": "1/1/2022"
+    },
+    {
+      "taskName": "Taxes",
+      "date": "4/15/2022",
+      "currency": "2000",
+      "status": true,
+      "frequency": "Annually",
+      "id": 8
     }
   ]
 }
