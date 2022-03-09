@@ -64,5 +64,12 @@
       "frequency": "Annually",
       "id": 8
     }
+  ],
+  "rewards":[
+    {
+      "id": 1,
+      "reward": "Concert tickets",
+      "status": false
+    }
   ]
 }
