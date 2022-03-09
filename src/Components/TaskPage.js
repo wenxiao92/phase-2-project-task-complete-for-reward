@@ -10,7 +10,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import TableCell from '@material-ui/core/TableCell';
 import Switch from '@material-ui/core/Switch';
 
-function TaskPage({allTasks, onUpdateTask, onHandleDisplay, switchStatus}) {
+function TaskPage({allTasks, onUpdateTask, onHandleDisplay, switchStatus, onUpdateTaskList}) {
   const displayTasks = allTasks.map((task) => (
     <TaskList 
     key = {task.id}
@@ -32,25 +32,27 @@ function TaskPage({allTasks, onUpdateTask, onHandleDisplay, switchStatus}) {
   return (
     
     <div>
-    <TaskForm />
-    <h1 align="center">Display Tasks!</h1>
+    <h1 align="center">Task Page</h1>
+    <TaskForm onUpdateTaskList={onUpdateTaskList}/>
+    <p>{/* for spacing*/}</p>
     <div align="center">Show All Tasks
       <Switch 
         checked={switchStatus}
         onClick={onHandleDisplay}
-        color="primary"
+        color="default"
         name="checkedB"
-        inputProps={{ 'aria-label': 'primary checkbox' }}
+        inputProps={{ 'aria-label': 'default checkbox' }}
       /> Show Outstanding Tasks</div>
+      <p>{/* for spacing*/}</p>
     <TableContainer component={Paper}>
     <Table className={classes.table} aria-label="simple table">
     <TableHead>
         <TableRow>
           <TableCell>Tasks</TableCell>
-          <TableCell align="right">Frequency</TableCell>
-          <TableCell align="right">Date</TableCell>
-          <TableCell align="right">Reward</TableCell>
-          <TableCell align="right">Status</TableCell>
+          <TableCell align="left">Date</TableCell>
+          <TableCell align="center">Reward</TableCell>
+          <TableCell align="center">Frequency</TableCell>
+          <TableCell align="center">Status</TableCell>
         </TableRow>
     </TableHead>
         {displayTasks}

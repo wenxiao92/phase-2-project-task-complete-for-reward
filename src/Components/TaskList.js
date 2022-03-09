@@ -6,7 +6,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 
 const TaskList = ({tasks, onUpdateTask}) => {
 
-  const {taskName, tickets, frequency, status, date, id} = tasks
+  const {taskName, currency, frequency, status, date, id} = tasks
 
     function handleChange(){
         fetch(`http://localhost:3001/task/${id}`, {
@@ -26,10 +26,10 @@ const TaskList = ({tasks, onUpdateTask}) => {
             <TableCell component="th" scope="row">
             {taskName}
             </TableCell>
-            <TableCell align="right">{frequency}</TableCell>
-            <TableCell align="right">{date}</TableCell>
-            <TableCell align="right">{tickets}</TableCell>
-            <TableCell align="right">      
+            <TableCell align="left">{date}</TableCell>
+            <TableCell align="center">{currency}</TableCell>
+            <TableCell align="center">{frequency}</TableCell>
+            <TableCell align="center">      
                 <Checkbox
                     checked={status}
                     onChange={handleChange}
