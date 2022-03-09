@@ -29,7 +29,8 @@ function App() {
       }
     });
     setTasks(updateTaskArray);
-    setCurrency((money) => money+updatedTask.currency)
+    setCurrency((money) => money+parseInt(updatedTask.currency))
+    console.log(currency)
   }
 
   //console.log(displayState)

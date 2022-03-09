@@ -4,7 +4,7 @@
       "id": 1,
       "taskName": "Clean room",
       "currency": 600,
-      "status": true,
+      "status": false,
       "frequency": "Weekly",
       "date": "1/1/2022"
     },
@@ -12,7 +12,7 @@
       "id": 2,
       "taskName": "Exercise",
       "currency": 250,
-      "status": true,
+      "status": false,
       "frequency": "Ideally often",
       "date": "1/1/2022"
     },
@@ -60,7 +60,7 @@
       "taskName": "Taxes",
       "date": "4/15/2022",
       "currency": "2000",
-      "status": true,
+      "status": false,
       "frequency": "Annually",
       "id": 8
     }
