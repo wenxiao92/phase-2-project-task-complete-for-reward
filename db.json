@@ -1,60 +1,60 @@
 {
-    "task": [
-        {
-            "id": 1,
-            "taskName": "Clean room",
-            "tickets": 600,
-            "status": false,
-            "frequency": "weekly",
-            "date": "1/1/2022"
-        },
-        {
-            "id": 2,
-            "taskName": "Exercise",
-            "tickets": 250,
-            "status": false,
-            "frequency": "Ideally everyday",
-            "date": "1/1/2022"
-        },
-        {
-            "id": 3,
-            "taskName": "Eat Breakfast",
-            "tickets": 100,
-            "status": false,
-            "frequency": "daily",
-            "date": "1/1/2022"
-        },
-        {
-            "id": 4,
-            "taskName": "Meal Prep",
-            "tickets": 200,
-            "status": false,
-            "frequency": "Ideally often",
-            "date": "1/1/2022"
-        },
-        {
-            "id": 5,
-            "taskName": "Flatiron school assignments",
-            "tickets": 100,
-            "status": false,
-            "frequency": "daily",
-            "date": "1/1/2022"
-        },
-        {
-            "id": 6,
-            "taskName": "Laundry",
-            "tickets": 600,
-            "status": false,
-            "frequency": "weekly",
-            "date": "1/1/2022"
-        },
-        {
-            "id": 7,
-            "taskName": "Take daily vitamins",
-            "tickets": 100,
-            "status": false,
-            "frequency": "daily",
-            "date": "1/1/2022"
-        }
-    ]
+  "task": [
+    {
+      "id": 1,
+      "taskName": "Clean room",
+      "currency": 600,
+      "status": false,
+      "frequency": "weekly",
+      "date": "1/1/2022"
+    },
+    {
+      "id": 2,
+      "taskName": "Exercise",
+      "currency": 250,
+      "status": true,
+      "frequency": "Ideally often",
+      "date": "1/1/2022"
+    },
+    {
+      "id": 3,
+      "taskName": "Eat Breakfast",
+      "currency": 100,
+      "status": false,
+      "frequency": "daily",
+      "date": "1/1/2022"
+    },
+    {
+      "id": 4,
+      "taskName": "Meal Prep",
+      "currency": 200,
+      "status": false,
+      "frequency": "Ideally often",
+      "date": "1/1/2022"
+    },
+    {
+      "id": 5,
+      "taskName": "Flatiron school assignments",
+      "currency": 100,
+      "status": false,
+      "frequency": "daily",
+      "date": "1/1/2022"
+    },
+    {
+      "id": 6,
+      "taskName": "Laundry",
+      "currency": 600,
+      "status": false,
+      "frequency": "weekly",
+      "date": "1/1/2022"
+    },
+    {
+      "id": 7,
+      "taskName": "Take daily vitamins",
+      "currency": 100,
+      "status": false,
+      "frequency": "daily",
+      "date": "1/1/2022"
+    }
+  ]
 }
