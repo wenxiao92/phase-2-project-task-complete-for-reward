@@ -3,6 +3,15 @@ import TableCell from '@material-ui/core/TableCell';
 import TableBody from '@material-ui/core/TableBody';
 import TableRow from '@material-ui/core/TableRow';
 import Checkbox from '@material-ui/core/Checkbox';
+import { withStyles} from '@material-ui/core/styles';
+
+const StyledTableRow = withStyles((theme) => ({
+    root: {
+      '&:nth-of-type(odd)': {
+        backgroundColor: theme.palette.action.hover,
+      },
+    },
+  }))(TableRow);
 
 const TaskList = ({tasks, onUpdateTask}) => {
 
@@ -22,7 +31,7 @@ const TaskList = ({tasks, onUpdateTask}) => {
 
   return (
     <TableBody>
-    <TableRow>
+    <StyledTableRow>
             <TableCell component="th" scope="row">
             {taskName}
             </TableCell>
@@ -36,7 +45,7 @@ const TaskList = ({tasks, onUpdateTask}) => {
                     inputProps={{ 'aria-label': 'primary checkbox' }}
                 />
             </TableCell>
-            </TableRow>
+            </StyledTableRow>
         </TableBody>
 
   )

@@ -6,9 +6,26 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import { makeStyles } from '@material-ui/core/styles';
+import { withStyles, makeStyles } from '@material-ui/core/styles';
 import TableCell from '@material-ui/core/TableCell';
 import Switch from '@material-ui/core/Switch';
+
+//for styling
+const StyledTableCell = withStyles((theme) => ({
+  head: {
+    backgroundColor: theme.palette.common.black,
+    color: theme.palette.common.white,
+  },
+  body: {
+    fontSize: 14,
+  },
+}))(TableCell);
+
+  const useStyles = makeStyles({
+    table: {
+      minWidth: 700,
+    },
+  });
 
 function TaskPage({allTasks, onUpdateTask, onHandleDisplay, switchStatus, onUpdateTaskList}) {
   const displayTasks = allTasks.map((task) => (
@@ -19,18 +36,9 @@ function TaskPage({allTasks, onUpdateTask, onHandleDisplay, switchStatus, onUpda
     />
   ))
 
-  //for styling
-  const useStyles = makeStyles({
-    table: {
-      minWidth: 650,
-    },
-  });
-
   const classes=useStyles()
-  //for styling
 
   return (
-    
     <div>
     <h1 align="center">Task Page</h1>
     <TaskForm onUpdateTaskList={onUpdateTaskList}/>
@@ -48,11 +56,11 @@ function TaskPage({allTasks, onUpdateTask, onHandleDisplay, switchStatus, onUpda
     <Table className={classes.table} aria-label="simple table">
     <TableHead>
         <TableRow>
-          <TableCell>Tasks</TableCell>
-          <TableCell align="left">Date</TableCell>
-          <TableCell align="center">Reward</TableCell>
-          <TableCell align="center">Frequency</TableCell>
-          <TableCell align="center">Status</TableCell>
+          <StyledTableCell>Tasks</StyledTableCell>
+          <StyledTableCell align="left">Date</StyledTableCell>
+          <StyledTableCell align="center">Reward</StyledTableCell>
+          <StyledTableCell align="center">Frequency</StyledTableCell>
+          <StyledTableCell align="center">Status</StyledTableCell>
         </TableRow>
     </TableHead>
         {displayTasks}
