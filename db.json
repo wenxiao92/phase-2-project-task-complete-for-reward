@@ -69,6 +69,49 @@
     {
       "id": 1,
       "reward": "Concert tickets",
+      "cost": 10000,
+      "status": false
+    },
+    {
+      "id": 2,
+      "reward": "Cruise trip to Bahamas",
+      "cost": 50000,
+      "status": false
+    },
+    {
+      "id": 3,
+      "reward": "Spa Day",
+      "cost": 3000,
+      "status": false
+    },
+    {
+      "id": 4,
+      "reward": "Buy that new phone you always wanted",
+      "cost": 75000,
+      "status": false
+    },
+    {
+      "id": 5,
+      "reward": "Broadway show",
+      "cost": 10000,
+      "status": false
+    },
+    {
+      "id": 6,
+      "reward": "Movie",
+      "cost": 3500,
+      "status": false
+    },
+    {
+      "id": 7,
+      "reward": "Dine in favorite restaurant",
+      "cost": 5500,
+      "status": false
+    },
+    {
+      "id": 8,
+      "reward": "Road Trip",
+      "cost": 10500,
       "status": false
     }
   ]
