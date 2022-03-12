@@ -32,9 +32,19 @@ const StyledTableCell = withStyles((theme) => ({
     },
   });
 
-const RewardRedemption = ({wallet}) => {
-  
+const RewardRedemption = ({wallet, allReward}) => {
 const classes = useStyles();
+
+const displayRewards = allReward.map((eachReward) => {return(
+  <StyledTableRow>
+  <StyledTableCell component="th" scope="row" align="center">
+  {eachReward.reward}
+</StyledTableCell>
+<StyledTableCell align="center">{eachReward.cost}</StyledTableCell>
+<StyledTableCell align="left">{eachReward.status ? "Redeemed" : "Click to Redeem"}</StyledTableCell>
+</StyledTableRow>
+)
+})
 
   return (
       <div>
@@ -50,13 +60,7 @@ const classes = useStyles();
           </TableRow>
         </TableHead>
         <TableBody>
-            <StyledTableRow>
-              <StyledTableCell component="th" scope="row" align="center">
-                dummy data
-              </StyledTableCell>
-              <StyledTableCell align="center">dummy data</StyledTableCell>
-              <StyledTableCell align="left">dummy data</StyledTableCell>
-            </StyledTableRow>
+          {displayRewards}
         </TableBody>
       </Table>
     </TableContainer>

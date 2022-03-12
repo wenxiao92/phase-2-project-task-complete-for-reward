@@ -10,11 +10,18 @@ function App() {
   const [tasks, setTasks] = useState([])
   const [currency, setCurrency] = useState(0)
   const [displayState, setDisplayState] = useState(true)
+  const [rewards, setRewards] = useState([])
 
   useEffect(() => {
     fetch("http://localhost:3001/task")
     .then(r => r.json())
     .then((data) => setTasks(data))
+  },[])
+
+  useEffect(() => {
+    fetch("http://localhost:3001/rewards")
+    .then(r => r.json())
+    .then((data) => setRewards(data))
   },[])
 
   //handles the status of the task (whether it's completed or not). Where the ckbox
@@ -43,7 +50,6 @@ function App() {
     let newTaskArray = [...tasks, updatedTask]
     setTasks(newTaskArray);
   }
-  
 
   //filter all tasks vs outstanding tasks based on status
   let filterActiveTask = tasks
@@ -56,7 +62,9 @@ function App() {
       <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/tasks" element={<TaskPage allTasks={filterActiveTask} onUpdateTask={handleUpdate} onHandleDisplay={handleTaskDisplay} switchStatus={displayState} onUpdateTaskList={handleUpdateTaskList}/>} />
-          <Route path="/rewards" element={<RewardRedemption wallet={currency}/>} />
+          <Route path="/rewards" element={<RewardRedemption wallet={currency} allReward={rewards} 
+
+          />} />
         </Routes>
         </BrowserRouter>
 
