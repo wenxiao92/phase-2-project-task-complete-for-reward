@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -32,16 +32,22 @@ const StyledTableCell = withStyles((theme) => ({
     },
   });
 
-const RewardRedemption = ({wallet, allReward}) => {
+const RewardRedemption = ({wallet, allReward, updateReward}) => {
 const classes = useStyles();
 
+function handleClick(e){
+ updateReward(e.target.value, e.target.id)
+}
+
 const displayRewards = allReward.map((eachReward) => {return(
-  <StyledTableRow>
+  <StyledTableRow key={eachReward.id}>
   <StyledTableCell component="th" scope="row" align="center">
   {eachReward.reward}
 </StyledTableCell>
 <StyledTableCell align="center">{eachReward.cost}</StyledTableCell>
-<StyledTableCell align="left">{eachReward.status ? "Redeemed" : "Click to Redeem"}</StyledTableCell>
+<StyledTableCell align="left"> <button 
+onClick={handleClick} id={eachReward.id} value={eachReward.status}
+>{eachReward.status ? "Redeemed" : "Click to Redeem"} </button></StyledTableCell>
 </StyledTableRow>
 )
 })
@@ -67,6 +73,5 @@ const displayRewards = allReward.map((eachReward) => {return(
     </div>
   )
 };
-  
 
 export default RewardRedemption
