@@ -63,9 +63,17 @@
       "status": false,
       "frequency": "Annually",
       "id": 8
+    },
+    {
+      "id": 9,
+      "taskName": "Annual physical exam",
+      "currency": 2000,
+      "status": false,
+      "frequency": "Annually",
+      "date": "1/1/2022"
     }
   ],
-  "rewards":[
+  "rewards": [
     {
       "id": 1,
       "reward": "Concert tickets",
@@ -104,7 +112,7 @@
     },
     {
       "id": 7,
-      "reward": "Dine in favorite restaurant",
+      "reward": "Dine at favorite restaurant",
       "cost": 5500,
       "status": false
     },
@@ -112,6 +120,12 @@
       "id": 8,
       "reward": "Road Trip",
       "cost": 10500,
+      "status": false
+    },
+    {
+      "id": 9,
+      "reward": "Ice Cream!",
+      "cost": 1700,
       "status": false
     }
   ]
