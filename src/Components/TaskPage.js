@@ -40,7 +40,8 @@ function TaskPage({allTasks, onUpdateTask, onHandleDisplay, switchStatus, onUpda
 
   return (
     <div>
-    <h1 align="center">Task Page</h1>
+    <h1 align="center">Your Tasks</h1>
+    <p align="center">Complete your tasks by clicking on the check box. You can also add tasks yourself!</p>
     <TaskForm onUpdateTaskList={onUpdateTaskList}/>
     <p>{/* for spacing*/}</p>
     <div align="center">Show All Tasks

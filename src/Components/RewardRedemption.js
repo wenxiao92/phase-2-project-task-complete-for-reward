@@ -55,6 +55,7 @@ onClick={handleClick} id={eachReward.id} value={eachReward.status} disabled={eac
   return (
       <div>
     <h1 align="center">Redemption Page </h1>
+    <p align="center"> Redeem your points for rewards here!</p>
     <h3 align="center">Current Count: {wallet}</h3>
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="customized table">
