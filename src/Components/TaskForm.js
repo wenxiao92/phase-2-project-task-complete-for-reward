@@ -17,7 +17,7 @@ function TaskForm({onUpdateTaskList}) {
 //for styling
 const classes = useStyles();
 //for dropdown
-const currencies = ['Daily','Weekly','Monthly','Quarterly','Annually','Ideally Often'];
+const frequencies = ['Daily','Weekly','Monthly','Quarterly','Annually','Ideally Often'];
 
 //handles the form's data
 const [formData, setFormData] = useState({
@@ -100,7 +100,7 @@ function handleSelectChange(event) {
           variant="filled"
         >
             <MenuItem value=""> <em>None</em></MenuItem>
-          {currencies.map((option) => (
+          {frequencies.map((option) => (
             <MenuItem key={option} value={option}>
               {option}
             </MenuItem>
