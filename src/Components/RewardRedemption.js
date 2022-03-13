@@ -46,7 +46,7 @@ const displayRewards = allReward.map((eachReward) => {return(
 </StyledTableCell>
 <StyledTableCell align="center">{eachReward.cost}</StyledTableCell>
 <StyledTableCell align="left"> <button 
-onClick={handleClick} id={eachReward.id} value={eachReward.status}
+onClick={handleClick} id={eachReward.id} value={eachReward.status} disabled={eachReward.status ? true : null}
 >{eachReward.status ? "Redeemed" : "Click to Redeem"} </button></StyledTableCell>
 </StyledTableRow>
 )
