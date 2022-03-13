@@ -22,13 +22,7 @@ const useStyles = makeStyles((theme) => ({
 function NavBar(){
     const classes = useStyles();
         return (
-            // <nav>
-            //      <ul>
-            //     <li><Link to="/"> Home </Link></li>
-            //     <li><Link to="/tasks"> Tasks </Link></li>
-            //     <li><Link to="/rewards"> Rewards </Link></li>
-            //     </ul>
-            // </nav>
+
             <div className={classes.root}>
             <AppBar position="static">
             <Container>
@@ -47,3 +41,4 @@ function NavBar(){
 }
 
 export default NavBar
+
