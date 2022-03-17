@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -56,7 +56,7 @@ onClick={handleClick} id={eachReward.id} value={eachReward.status} disabled={eac
       <div>
     <h1 align="center">Redemption Page </h1>
     <p align="center"> Redeem your points for rewards here!</p>
-    <h3 align="center">Current Count: {wallet}</h3>
+    <h3 align="center">Current Points: {wallet}</h3>
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="customized table">
         <TableHead>

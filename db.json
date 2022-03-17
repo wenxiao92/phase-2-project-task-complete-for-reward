@@ -71,6 +71,14 @@
       "status": false,
       "frequency": "Annually",
       "date": "1/1/2022"
+    },
+    {
+      "taskName": "Create youtube video",
+      "date": "3/16/2022",
+      "currency": "2500",
+      "status": false,
+      "frequency": "Monthly",
+      "id": 10
     }
   ],
   "rewards": [
@@ -126,7 +134,7 @@
       "id": 9,
       "reward": "Ice Cream!",
       "cost": 1700,
-      "status": false
+      "status": true
     }
   ]
 }
